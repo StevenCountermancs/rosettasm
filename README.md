@@ -1,6 +1,12 @@
 # RosettASM
 
-RosettASM is a pedagogical system for visualizing how high-level code executes at the machine level.
+RosettASM is a pedagogical programming environment for visualizing how high-level code executes at the machine level.
+
+## Demo
+
+![RosettASM Screenshot](rosettasm/docs/demo_screenshot.png)
+
+The system visualizes step-by-step execution, showing how high-level code maps to assembly while tracking register and stack state in real time.
 
 ## Features
 
@@ -10,13 +16,14 @@ RosettASM is a pedagogical system for visualizing how high-level code executes a
 - Register and stack tracking
 - Interactive GUI built with PyQt
 
-## Running the Application
+## Installation & Running
 
 ### Option 1: Executable
 Download the latest release and run `RosettASM.exe`.
 
 ### Option 2: From Source
 ```bash
+pip install PyQt6 QScintilla
 python launch_rosettasm.py
 ```
 
@@ -30,7 +37,7 @@ See full guide:
 
 - `rosettasm/` – core compiler, UI, and execution engine
 - `launch_rosettasm.py` – application entry point
-- `docs/` – documentation files
+- `rosettasm/docs/` – documentation files
 
 ## Technologies
 
@@ -50,8 +57,14 @@ This project uses the following open-source libraries:
 - PyQt (GPL licensed)
 - QScintilla (GPL licensed)
 
-RosettASM is distributed for educational purposes and includes source code in compliance with GPL requirements.
+RosettASM is distributed with source code in compliance with GPL requirements.
 
 For more information:
 - https://www.riverbankcomputing.com/software/pyqt/
 - https://www.riverbankcomputing.com/software/qscintilla/
+
+## License
+
+This project is licensed under the GPL-3.0 License.
+
+This project uses GPL-licensed dependencies (PyQt and QScintilla) and is distributed in compliance with their terms.
