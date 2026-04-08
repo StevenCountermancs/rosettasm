@@ -8,6 +8,8 @@ RosettASM is a pedagogical programming environment for visualizing how high-leve
 
 The system visualizes step-by-step execution, showing how high-level code maps to assembly while tracking register and stack state in real time. It bridges the gap between source code and machine execution by making data flow, register usage, and stack behavior explicitly visible.
 
+Download the latest release from the [Releases](../../releases) page.
+
 ## Features
 
 - Custom high-level language
