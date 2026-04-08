@@ -6,7 +6,7 @@ RosettASM is a pedagogical programming environment for visualizing how high-leve
 
 ![RosettASM Screenshot](rosettasm/docs/demo_screenshot.png)
 
-The system visualizes step-by-step execution, showing how high-level code maps to assembly while tracking register and stack state in real time.
+The system visualizes step-by-step execution, showing how high-level code maps to assembly while tracking register and stack state in real time. It bridges the gap between source code and machine execution by making data flow, register usage, and stack behavior explicitly visible.
 
 ## Features
 
@@ -64,6 +64,8 @@ For more information:
 - https://www.riverbankcomputing.com/software/qscintilla/
 
 ## License
+
+Copyright (C) 2026 Steven Counterman
 
 This project is licensed under the GPL-3.0 License.
 
