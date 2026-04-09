@@ -33,6 +33,7 @@ class RegisterWidget(QFrame):
             QLabel {
                 background: transparent;
                 border: none;
+                color: #d4d4d4;
             }
         """
         self._build_ui(name)
@@ -176,6 +177,7 @@ class RegisterWidget(QFrame):
             QLabel {{
                 background: transparent;
                 border: none;
+                color: #d4d4d4
             }}
         """)
 

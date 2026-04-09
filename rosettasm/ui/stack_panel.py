@@ -33,6 +33,25 @@ class StackPanel(QFrame):
         self.outer_layout = QVBoxLayout()
         self.outer_layout.setContentsMargins(5, 5, 5, 5)
         self.setLayout(self.outer_layout)
+        self.setStyleSheet("""
+        QFrame {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+        }
+
+        QLabel {
+            color: #d4d4d4;
+        }
+
+        QScrollArea {
+            background-color: #1e1e1e;
+            border: none;
+        }
+
+        QWidget {
+            background-color: #1e1e1e;
+        }
+        """)
 
         self.title_label = QLabel(title)
         self.title_label.setFont(self.title_font)
@@ -464,7 +483,12 @@ class StackPanel(QFrame):
     # Return Value: str – base stylesheet string                                #
     #############################################################################
     def _base_cell_style(self):
-        return ""
+        return """
+            QLabel {
+                background-color: transparent;
+                color: #d4d4d4;
+            }
+        """
 
     #############################################################################
     # Function name:        _highlight_cell_style                               #

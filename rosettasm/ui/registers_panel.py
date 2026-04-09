@@ -77,6 +77,20 @@ class RegistersPanel(QFrame):
         main_layout.addWidget(grid_container)
 
         self.setLayout(main_layout)
+        self.setStyleSheet("""
+        QFrame {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+        }
+
+        QLabel {
+            color: #d4d4d4;
+        }
+
+        QWidget {
+            background-color: #1e1e1e;
+        }
+        """)
 
     #############################################################################
     # Function name:        set_register                                        #

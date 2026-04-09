@@ -76,6 +76,10 @@ class MainWindow(QMainWindow):
     #############################################################################
     def _build_ui(self):
         central_widget = QWidget()
+        central_widget.setStyleSheet("""
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+        """)
         self.setCentralWidget(central_widget)
 
         outer_layout = QVBoxLayout()

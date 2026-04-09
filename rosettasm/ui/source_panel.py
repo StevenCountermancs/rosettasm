@@ -70,14 +70,21 @@ class SourcePanel(QFrame):
         self.editor.setMarginWidth(0, "0000")
         self.editor.setMarginsBackgroundColor(QColor("#252526"))
         self.editor.setMarginsForegroundColor(QColor("#aaaaaa"))
+
         self.editor.setIndentationsUseTabs(False)
         self.editor.setTabWidth(4)
         self.editor.setIndentationWidth(4)
         self.editor.setAutoIndent(True)
         self.editor.setBackspaceUnindents(True)
+
+        # Force editor dark theme explicitly
+        self.editor.setPaper(QColor("#1e1e1e"))
+        self.editor.setColor(QColor("#d4d4d4"))
+
         self.editor.setCaretLineVisible(True)
-        self.editor.setCaretLineBackgroundColor(QColor("#1e1e1e"))
+        self.editor.setCaretLineBackgroundColor(QColor("#2a2d2e"))
         self.editor.setCaretForegroundColor(QColor("white"))
+
         self.editor.setEdgeMode(QsciScintilla.EdgeMode.EdgeNone)
 
         font = QFont("Consolas", 12)

@@ -82,6 +82,12 @@ class AsmOutputPanel(QFrame):
         self.asm_output.setFont(QFont("Consolas", 12))
         self.asm_output.setReadOnly(True)
 
+        self.asm_output.setStyleSheet("""
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            border: none;
+        """)
+
         main_layout.addLayout(top_bar)
         main_layout.addWidget(self.asm_output)
 
@@ -186,7 +192,7 @@ class AsmOutputPanel(QFrame):
         selection = QTextEdit.ExtraSelection()
         selection.cursor = cursor
         selection.cursor.clearSelection()
-        selection.format.setBackground(QColor("#0A64F0"))
+        selection.format.setBackground(QColor("#264F78"))
         selection.format.setProperty(QTextFormat.Property.FullWidthSelection, True)
 
         self.asm_output.setExtraSelections([selection])

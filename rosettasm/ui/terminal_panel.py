@@ -37,6 +37,11 @@ class TerminalPanel(QFrame):
         self.output = QTextEdit()
         self.output.setReadOnly(True)
         self.output.setFont(QFont("Consolas", 11))
+        self.output.setStyleSheet("""
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            border: none;
+        """)
 
         layout.addWidget(title_label)
         layout.addWidget(self.output)
@@ -53,10 +58,10 @@ class TerminalPanel(QFrame):
         self.output.setPlainText(text)
 
     #############################################################################
-    # Function name:        append_text                                          #
+    # Function name:        append_text                                         #
     # Description:          Appends text to the terminal output                 #
     # Parameters:    str –  text: text to append                                #
-    # Return Value: None                                                         #
+    # Return Value: None                                                        #
     #############################################################################
     def append_text(self, text: str):
         self.output.append(text)
