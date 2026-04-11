@@ -1,0 +1,13 @@
+int total = 0;
+
+for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+        if (i == j) {
+            total = total + 2;
+        } else {
+            total = total + 1;
+        }
+    }
+}
+
+int result = total;
