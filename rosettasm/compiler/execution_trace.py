@@ -559,8 +559,8 @@ def build_execution_trace(asm_lines):
             state["last_cmp"] = cmp_result
 
             #Simplified EFLAGS for UI
-            state["register_values"]["eflags"] = 0 if cmp_result == 0 else 1
-            state["register_holds"]["eflags"] = "(cmp)"
+            state["register_values"]["eflags"] = cmp_result
+            state["register_holds"]["eflags"] = "(last cmp)"
 
             highlight_regs = {"EFLAGS": "purple"}
             if is_register(left):

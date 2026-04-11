@@ -128,6 +128,8 @@ class RegistersPanel(QFrame):
             return "(stack pointer)"
         if reg_name == "EIP":
             return "(instr pointer)"
+        if reg_name == "EFLAGS":
+            return "(last cmp)"
 
         if held_value is None:
             return ""

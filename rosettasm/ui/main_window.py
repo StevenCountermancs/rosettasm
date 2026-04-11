@@ -316,7 +316,6 @@ class MainWindow(QMainWindow):
             self.source_panel.highlight_source_lines(group_source_lines)
 
         else:
-            self.source_panel.clear_source_highlight()
             self.visible_snapshot_indices = list(range(len(self.asm_lines)))
             self.visible_asm_lines = list(self.asm_lines)
 
@@ -325,10 +324,12 @@ class MainWindow(QMainWindow):
         if self.visible_asm_lines:
             self.current_asm_index = 0
             self.highlight_current_asm_line()
+            self.update_source_panel_highlight()
 
             if self.asm_view_mode == "execution":
                 self.update_registers_panel()
                 self.update_stack_panel()
+                self.source_panel.clear_source_highlight()
         else:
             self.current_asm_index = -1
             self.asm_panel.clear_highlight()
@@ -357,6 +358,7 @@ class MainWindow(QMainWindow):
 
         self.current_asm_index = index
         self.highlight_current_asm_line()
+        self.update_source_panel_highlight()
 
     #############################################################################
     # Function name:        set_current_execution_step                          #
@@ -379,6 +381,7 @@ class MainWindow(QMainWindow):
 
         self.current_asm_index = visible_index
         self.highlight_current_asm_line()
+        self.update_source_panel_highlight()
         self.update_registers_panel()
         self.update_stack_panel()
 
@@ -394,6 +397,26 @@ class MainWindow(QMainWindow):
             return
 
         self.asm_panel.highlight_line(self.current_asm_index)
+
+    #############################################################################
+    # Function name:        update_source_panel_highlight                       #
+    # Description:          Highlights source line(s) for current selection     #
+    # Parameters:    None                                                       #
+    # Return Value: None                                                        #
+    #############################################################################
+    def update_source_panel_highlight(self):
+        if self.asm_view_mode == "grouped":
+            group_source_lines = self.get_source_lines_for_vis_group()
+            self.source_panel.highlight_source_lines(group_source_lines)
+            return
+
+        snapshot = self.get_current_snapshot()
+
+        if snapshot is None or snapshot.source_span is None:
+            self.source_panel.clear_source_highlight()
+            return
+
+        self.source_panel.highlight_source_line(snapshot.source_span.line - 1)
 
     #############################################################################
     # Function name:        on_step_prev_requested                              #
