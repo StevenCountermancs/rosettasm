@@ -2,6 +2,8 @@
 
 RosettASM is a pedagogical programming environment for visualizing how high-level code executes at the machine level.
 
+It maps source code to x86 assembly and allows step-by-step execution with full visibility into registers, memory, and control flow.
+
 ## Demo
 
 ![RosettASM Screenshot](rosettasm/docs/demo_screenshot.png)
@@ -16,6 +18,7 @@ Download the latest release from the [Releases](../../releases) page.
 - Compilation to x86 assembly
 - Step-by-step execution visualization
 - Register and stack tracking
+- Clear representation of control flow and data movement
 - Interactive GUI built with PyQt
 
 ## Installation & Running
