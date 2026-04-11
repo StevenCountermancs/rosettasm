@@ -1,9 +1,0 @@
-// Demonstrates a basic if statement
-
-int x = 5;
-int y = 10;
-int max = 0;
-
-if (x > y) {
-    max = x;
-}

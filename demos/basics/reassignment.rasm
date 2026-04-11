@@ -1,5 +1,0 @@
-// Demonstrates updating a variable
-//    using its current value
-
-int a = 5;
-a = a + 2;

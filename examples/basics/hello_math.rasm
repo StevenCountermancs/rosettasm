@@ -1,0 +1,5 @@
+// Demonstrates simple arithmetic
+//     expressions and assignment
+
+int a = 2 + 3;
+int b = a + 4;

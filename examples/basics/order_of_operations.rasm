@@ -1,0 +1,3 @@
+// Demonstrates order of operations
+
+int result = 2 + 3 * 4;
